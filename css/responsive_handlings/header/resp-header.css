@@ -1,0 +1,32 @@
+/* ---------------------------------------------------- */
+/*
+    [css-file]: resp-header.css
+    
+    [info]: defines all responsive handlings by 
+    sizing the screen
+
+/* ---------------------------------------------------- */
+
+
+
+/* --------------------------------------------------- */
+/*  >= 980px 
+/* 
+/* - change mobile layout to monitor layout 
+/* --------------------------------------------------- */
+@media (min-width: 980px) {
+
+    /* ---------------------------------------- */
+    /* Header Layout to one row layout
+    /* ---------------------------------------- */
+    #header-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+     
+    }
+    
+
+}
+

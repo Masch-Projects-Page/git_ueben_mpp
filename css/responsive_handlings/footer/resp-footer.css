@@ -1,0 +1,32 @@
+/* ---------------------------------------------------- */
+/*
+    [css-file]: resp-footer.css
+    
+    [info]: defines all responsive handlings by 
+    sizing the screen
+
+/* ---------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------- */
+/* Over 950px change footer layout 
+/* --------------------------------------------------- */
+
+@media (min-width: 950px) {
+
+
+    /* change min 950px same as header to bigger font size */
+    #own-footer {
+
+        font-size: 1.3em;
+    }
+
+
+}

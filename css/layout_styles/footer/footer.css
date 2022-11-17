@@ -1,0 +1,27 @@
+/* ---------------------------------------------------- */
+/*
+    [css-file]: footer.css
+    
+    [info]: defines all styles which will be styled
+    in our footer
+
+/* ---------------------------------------------------- */
+
+
+
+#own-footer {
+
+    /*font-size: 1.3em;*/
+
+    background-color: var(--moon-dark-black);
+    color: var(--white);
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------- */
+/* Link Home Banner
+/* ---------------------------------------------------------- */

@@ -1,0 +1,365 @@
+/* ---------------------------------------------------- */
+/*
+    [css-file]: main-article-doc-area.css
+    
+    [info]: defines all styles which will be styled
+    in our main article doc area.
+    
+    Some Elements good be used in other css files 
+    for no repating yourself.
+
+/* ---------------------------------------------------- */
+
+
+
+
+/* -------------------------------------------------- */
+/* Nav Docs Topics Container 
+/* -------------------------------------------------- */
+
+/* horizontal grey stripes */
+#trigger-m-a-c-nav-docs-topics label:nth-of-type(1),
+#trigger-m-a-c-nav-docs-topics label:nth-of-type(1),
+#trigger-m-a-c-nav-docs-topics label:nth-of-type(2), 
+#trigger-m-a-c-nav-docs-topics label:nth-of-type(3)  {
+
+    border-right: 2px solid var(--middle-1-grey);
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------- */
+/* 
+/* Radio Label - Handlings
+/*
+/* ------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------- */
+/* [1] - Nav Topcis - X Label 
+/* --------------------------------------- */
+
+
+/* if one of 4 topics is setted , x get red version */
+input#radio-nav-docs-topic-web:checked ~ main #lbl-nav-docs-topic-x > img:nth-of-type(1),
+input#radio-nav-docs-topic-ds:checked ~ main #lbl-nav-docs-topic-x  > img:nth-of-type(1) ,
+input#radio-nav-docs-topic-dbs:checked ~ main #lbl-nav-docs-topic-x > img:nth-of-type(1) ,
+input#radio-nav-docs-topic-tt:checked ~ main #lbl-nav-docs-topic-x > img:nth-of-type(1) {
+
+    display: none;
+}
+
+input#radio-nav-docs-topic-web:checked ~ main #lbl-nav-docs-topic-x > img:nth-of-type(2),
+input#radio-nav-docs-topic-ds:checked ~ main #lbl-nav-docs-topic-x  > img:nth-of-type(2) ,
+input#radio-nav-docs-topic-dbs:checked ~ main #lbl-nav-docs-topic-x > img:nth-of-type(2) ,
+input#radio-nav-docs-topic-tt:checked ~ main #lbl-nav-docs-topic-x > img:nth-of-type(2) {
+
+    display: block;
+}
+
+
+
+/* ----------------------------------------------------------------- */
+/* [2] - Nav Topic - Topic Panel
+/* ----------------------------------------------------------------- */
+
+
+/* default radio nav topic unshown ( no jumping) */
+
+input#radio-nav-docs-topic-web ,
+input#radio-nav-docs-topic-ds , 
+input#radio-nav-docs-topic-dbs ,
+input#radio-nav-docs-topic-tt , 
+input#radio-nav-docs-topic-x {
+
+    /* z-index: 122;*/
+    display: none;
+}
+
+
+
+/* Style Setted Radio Label Nav Topic  */
+input#radio-nav-docs-topic-web:checked ~ main #lbl-nav-docs-topic-web ,
+input#radio-nav-docs-topic-ds:checked ~ main #lbl-nav-docs-topic-ds  ,
+input#radio-nav-docs-topic-dbs:checked ~ main #lbl-nav-docs-topic-dbs  ,
+input#radio-nav-docs-topic-tt:checked ~ main #lbl-nav-docs-topic-tt   {
+
+    background-color: var(--light-brown);
+    color: var(--black);
+}
+
+
+/* hover unshown white img version */
+input#radio-nav-docs-topic-web:checked ~ main #lbl-nav-docs-topic-web > img:nth-of-type(1),
+input#radio-nav-docs-topic-ds:checked ~ main #lbl-nav-docs-topic-ds  > img:nth-of-type(1) ,
+input#radio-nav-docs-topic-dbs:checked ~ main #lbl-nav-docs-topic-dbs > img:nth-of-type(1) ,
+input#radio-nav-docs-topic-tt:checked ~ main #lbl-nav-docs-topic-tt > img:nth-of-type(1) {
+
+    display: none;
+}
+
+/* hover show black img version */
+input#radio-nav-docs-topic-web:checked ~ main #lbl-nav-docs-topic-web > img:nth-of-type(2),
+input#radio-nav-docs-topic-ds:checked ~ main #lbl-nav-docs-topic-ds  > img:nth-of-type(2) ,
+input#radio-nav-docs-topic-dbs:checked ~ main #lbl-nav-docs-topic-dbs > img:nth-of-type(2) ,
+input#radio-nav-docs-topic-tt:checked ~ main #lbl-nav-docs-topic-tt > img:nth-of-type(2) {
+
+    display: block;
+}
+
+
+/* unshown animated panel if one of 4 topics is setted */
+input#radio-nav-docs-topic-web:checked ~ main #trigger-main-nav-topics-animated ,
+input#radio-nav-docs-topic-ds:checked ~ main #trigger-main-nav-topics-animated , 
+input#radio-nav-docs-topic-dbs:checked ~ main #trigger-main-nav-topics-animated ,
+input#radio-nav-docs-topic-tt:checked ~ main #trigger-main-nav-topics-animated {
+
+    display: none;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* [3] - Show Content Page by selected Topic                              */
+/* ---------------------------------------------------------------- */
+
+
+
+/* default unshown this doc cards */
+#trigger-a-c-doc-webdev , 
+#trigger-a-c-doc-ds ,  
+#trigger-a-c-doc-dbs ,
+#trigger-a-c-doc-tt {
+
+    display: none;
+}
+
+/* Database & Security dont need filter #trigger-a-c-doc-dbs {display: flex; }*/
+
+
+/* show content page if selected topic */
+input#radio-nav-docs-topic-web:checked ~ main #trigger-a-c-doc-webdev ,
+input#radio-nav-docs-topic-ds:checked ~ main #trigger-a-c-doc-ds ,
+input#radio-nav-docs-topic-dbs:checked ~ main #trigger-a-c-doc-dbs ,
+input#radio-nav-docs-topic-tt:checked ~ main #trigger-a-c-doc-tt {
+
+    display: block;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/* [4.1] - Filter of setted Topic - Web-Development                 */
+/* ---------------------------------------------------------------- */
+
+/* radio filter web-development */
+input#radio-filter-docs-webframeworks,
+input#radio-filter-docs-web-programming , 
+input#radio-filter-docs-html ,
+input#radio-filter-docs-webserver , 
+input#radio-filter-docs-cms {
+
+    display: none;
+}
+
+
+/* radio filter page of web-development */
+#trigger-filter-page-docs-webdev-webframeworks,
+#trigger-filter-page-docs-webdev-programming,
+#trigger-filter-page-docs-webdev-html , 
+#trigger-filter-page-docs-webdev-webserver , 
+#trigger-filter-page-docs-webdev-cms {
+
+    /*display: flex; */
+    display: none;
+     
+}
+
+
+
+/* show setted own radio box */
+
+input#radio-filter-docs-webframeworks:checked ~ main #lbl-filter-docs-webdev-webframeworks .radio-masch-x-box ,
+input#radio-filter-docs-web-programming:checked ~ main #lbl-filter-docs-webdev-programming .radio-masch-x-box ,
+input#radio-filter-docs-html:checked ~ main #lbl-filter-docs-webdev-html .radio-masch-x-box ,
+input#radio-filter-docs-webserver:checked ~ main #lbl-filter-docs-webdev-webserver .radio-masch-x-box , 
+input#radio-filter-docs-cms:checked ~ main #lbl-filter-docs-webdev-cms .radio-masch-x-box {
+
+    display: flex;
+}
+
+
+/* show setted filter page container */
+
+input#radio-filter-docs-webframeworks:checked ~ main #trigger-filter-page-docs-webdev-webframeworks ,
+input#radio-filter-docs-web-programming:checked ~ main #trigger-filter-page-docs-webdev-programming , 
+input#radio-filter-docs-html:checked ~ main #trigger-filter-page-docs-webdev-html ,
+input#radio-filter-docs-webserver:checked ~ main #trigger-filter-page-docs-webdev-webserver ,
+input#radio-filter-docs-cms:checked ~ main #trigger-filter-page-docs-webdev-cms {
+
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/* [4.2] - Filter of setted Topic - Data Science                    */
+/* ---------------------------------------------------------------- */
+
+/* radio filter data science */
+input#radio-filter-docs-dst ,
+input#radio-filter-docs-math , 
+input#radio-filter-docs-ds-programming ,
+input#radio-filter-docs-mlai  {
+
+    /*z-index: 122;*/
+    display: none;
+}
+
+
+/* radio filter page of data Science */
+#trigger-filter-page-doc-ds-dstools,
+#trigger-filter-page-doc-ds-math ,
+#trigger-filter-page-doc-ds-programming , 
+#trigger-filter-page-doc-ds-maschinelai {
+
+    /*display: flex; */
+    display: none;
+     
+}
+
+
+
+/* show setted own radio box */
+
+input#radio-filter-docs-dst:checked ~ main #lbl-doc-filter-ds-dstools .radio-masch-x-box ,
+input#radio-filter-docs-math:checked ~ main #lbl-doc-filter-ds-math .radio-masch-x-box ,
+input#radio-filter-docs-ds-programming:checked ~ main #lbl-filter-doc-ds-programming .radio-masch-x-box ,
+input#radio-filter-docs-mlai:checked ~ main #lbl-filter-doc-ds-mlai .radio-masch-x-box  {
+
+    display: flex;
+}
+
+
+/* show setted filter page container */
+
+input#radio-filter-docs-dst:checked:checked ~ main #trigger-filter-page-doc-ds-dstools ,
+input#radio-filter-docs-math:checked ~ main #trigger-filter-page-doc-ds-math  , 
+input#radio-filter-docs-ds-programming:checked ~ main #trigger-filter-page-doc-ds-programming ,
+input#radio-filter-docs-mlai:checked ~ main #trigger-filter-page-doc-ds-maschinelai {
+
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/* [4.3] - Filter of setted Topic - Database & Security             */
+/* ---------------------------------------------------------------- */
+
+/* radio filter data database & security */
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/* [4.4] - Filter of setted Topic - Tech Tools                      */
+/* ---------------------------------------------------------------- */
+
+/* radio filter tech tools */
+input#radio-filter-docs-tt-dev ,
+input#radio-filter-docs-tt-office , 
+input#radio-filter-docs-tt-multimedia  {
+
+    /*z-index: 122;*/
+    display: none;
+}
+
+
+/* radio filter page of data Science */
+#trigger-filter-page-doc-tt-dev ,
+#trigger-filter-page-doc-tt-office ,
+#trigger-filter-page-doc-tt-multimedia {
+
+    /*display: flex; */
+    display: none;
+     
+}
+
+
+
+/* show setted own radio box */
+
+input#radio-filter-docs-tt-dev:checked ~ main #lbl-filter-doc-tt-dev .radio-masch-x-box ,
+input#radio-filter-docs-tt-office:checked ~ main #lbl-filter-doc-tt-office .radio-masch-x-box ,
+input#radio-filter-docs-tt-multimedia:checked ~ main #lbl-filter-doc-tt-multimedia .radio-masch-x-box  {
+
+    display: flex;
+}
+
+
+/* show setted filter page container */
+
+input#radio-filter-docs-tt-dev:checked ~ main #trigger-filter-page-doc-tt-dev ,
+input#radio-filter-docs-tt-office:checked ~ main #trigger-filter-page-doc-tt-office  , 
+input#radio-filter-docs-tt-multimedia:checked ~ main #trigger-filter-page-doc-tt-multimedia {
+
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

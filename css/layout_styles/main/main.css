@@ -1,0 +1,736 @@
+/* ---------------------------------------------------- */
+/*
+    [css-file]: main.css
+    
+    [info]: defines all styles which will be styled
+    in our main content 
+
+/* ---------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------- */
+/* [Default] Article Layout Structure 
+/* ---------------------------------------------------------------------- */
+
+
+/* because of header position: fixed (absolute) */
+main > article:first-child { padding-top: 6em; }
+
+main > article {  padding: 2em 0px;  }
+
+main > article:nth-of-type( n + 2 ) {
+
+    border-top: 3px solid black;
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+/* [Default] - Article Card Area 
+/* ---------------------------------------------------------------------- */
+
+.main-article-card-area {
+
+    /* because of resp-content-container, flex justify-content: center */
+    width: 100%;
+    background-color: yellow;
+  
+}
+
+
+/* ---------------------------------------------------------- */
+/* [Default] - Article Card - Header Container 
+/* ---------------------------------------------------------- */
+
+.main-article-card-header-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* ---------------------------------------- */
+/* [Default] - Header Marker Box  
+/* ---------------------------------------- */
+
+
+.m-a-c-header-marker {
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--light-brown);
+
+    border-top-left-radius: .3em;
+    border-top-right-radius: .3em;
+
+    height: 4em;
+
+    /*padding: .6em 1.2em;*/
+}
+
+.m-a-c-h-m-title-area {
+
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+
+    padding: .6em 1.2em;
+
+}
+
+.m-a-c-h-m-title-box { line-height: 1.2em; }
+
+.m-a-c-h-m-title-box > div:first-child {
+
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.m-a-c-h-m-title-box div:last-child {
+
+   font-style: italic;
+}
+
+.svg-header-marker { height: 2em; }
+
+
+
+/* ------------------------------------------ */
+/* Header Marker - Mp3 Label 
+/* ------------------------------------------ */
+
+.lbl-mp3-card {
+
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--middle-1-grey);
+
+    width: 4em;
+    height: 100%;
+
+    cursor: pointer;
+
+   
+    border-top-right-radius: .3em;
+    
+}
+
+.lbl-mp3-card:hover {
+
+    transition: .3s;
+    background-color: var(--dark-moon-grey);
+}
+
+.svg-mp3-card { height: 2.3em; }
+
+
+
+/* ---------------------------------------------------- */
+/* MP3 Label Handling 
+/* ---------------------------------------------------- */
+
+/* default unshown chk mp3 */
+input#chk-mp3-docs , 
+input#chk-mp3-projects , 
+input#chk-mp3-about {
+
+
+    /*z-index: 122;*/
+    display:none;
+
+}
+
+/* default unshown pause img */
+input#chk-mp3-docs ~ main #lbl-mp3-docs img:nth-of-type(2) ,
+input#chk-mp3-projects ~ main #lbl-mp3-projects img:nth-of-type(2) ,
+input#chk-mp3-about ~ main #lbl-mp3-about img:nth-of-type(2)  {
+
+    display: none;
+
+}
+
+
+/* if false , then use js to pause */
+input#chk-mp3-docs:checked ~ main #lbl-mp3-docs img:nth-of-type(2) ,
+input#chk-mp3-projects:checked ~ main #lbl-mp3-projects img:nth-of-type(2) ,
+input#chk-mp3-about:checked ~ main #lbl-mp3-about img:nth-of-type(2)  {
+
+    display: block;
+
+}
+
+/* show background red to show that this is active */
+input#chk-mp3-docs:checked ~ main #lbl-mp3-docs ,
+input#chk-mp3-projects:checked ~ main #lbl-mp3-projects  ,
+input#chk-mp3-about:checked ~ main #lbl-mp3-about {
+
+    background-color: var(--light-red);
+} 
+
+/* hover effect is audio is playing */
+input#chk-mp3-docs:checked ~ main #lbl-mp3-docs:hover ,
+input#chk-mp3-projects:checked ~ main #lbl-mp3-projects:hover  ,
+input#chk-mp3-about:checked ~ main #lbl-mp3-about:hover {
+
+    transition: .3s;
+    background-color: var(--middle-1-grey);
+
+}
+
+/* play unshown */
+input#chk-mp3-docs:checked ~ main #lbl-mp3-docs img:nth-of-type(1) ,
+input#chk-mp3-projects:checked ~ main #lbl-mp3-projects img:nth-of-type(1) ,
+input#chk-mp3-about:checked ~ main #lbl-mp3-about img:nth-of-type(1)  {
+
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------- */
+/* [Default] - JS Date - Box 
+/* ------------------------------------- */
+
+#js-date {
+
+    background-color: var(--moon-dark-black);
+    border-radius: .3em;
+
+    font-weight: bold;
+    padding: .3em .9em;
+    
+}
+
+#js-date > span:first-child {
+
+    color: var(--white);
+}
+
+#js-date > span:last-child {
+
+    color: var(--light-brown);
+}
+
+
+/* ---------------------------------------------------------- */
+/* [Default] - Article Card - Content Container 
+/* ---------------------------------------------------------- */
+
+.main-article-card-content-container {
+
+    background-color: var(--moon-dark-black);
+    color: var(--white);
+
+    border-radius: 0em .3em .3em .3em;
+
+}
+
+/* ---------------------------------------------------- */ 
+/* [Default] - Content Info - Container                 */
+/* ---------------------------------------------------- */ 
+
+.m-a-c-c-info-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+/* Info Text Block */
+
+.m-a-c-c-info-text-block { 
+
+    display: grid;
+    grid: auto / auto auto;
+
+    row-gap: 1.5em;
+    column-gap: 1.8em;
+
+    padding: 1em 1.6em;
+}
+
+.txt-u { text-decoration: underline; }
+
+.m-a-c-c-info-text-block > div {
+
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.svg-a-c-info-text-block-web { height: 1.8em; }
+.svg-a-c-info-text-block-other { height: 1.5em; }
+
+   
+
+/* Info Img Block */
+
+.png-m-a-c-c-info-img-block {
+
+    border-radius: 0em .3em 0em 0em;
+    height: 9em;
+
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------------- */ 
+/* [Default] - Content Nav Container                        */
+/* --------------------------------------------------------- */ 
+
+.main-article-card-nav {
+
+    display: grid;
+    grid: 3.3em / 3.3em 1fr;
+
+}
+
+/* ---------------------------------------------------------------- */
+/* [Default] - Nav Topic & Animated 
+/* ---------------------------------------------------------------- */
+
+.m-a-c-n-sub-topics,
+.m-a-c-n-sub-animated {
+
+    display: grid;
+    grid: 100% / .9fr .8fr 1.1fr .7fr;
+
+}
+
+/* animted icions should be centered */
+.m-a-c-n-sub-animated {
+
+    align-items: center;
+    justify-items: center;
+
+}
+
+.svg-main-arrow-down { height: .6em; }
+
+
+
+
+
+/* --------------------------------------------------- */
+/* [Default] - Label X - Open/Close
+/* --------------------------------------------------- */
+.main-article-card-label-x {
+
+  
+    background-color: var(--dark-moon-grey);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3em;
+
+    cursor: pointer;
+}
+
+.main-article-card-label-x:hover , 
+.main-article-cart-nav-label:hover {
+
+    transition: .3s;
+    background-color: var(--light-brown);
+
+    color: var(--black);
+}
+
+
+.main-article-card-label-x > img:nth-of-type(2) {
+
+    display: none;
+}
+
+.svg-nav-open-close-x { height: 1em; }
+
+
+
+
+/* ------------------------------------------------------ */
+/* [Default] - Style Label for Nav Topics 
+/* ------------------------------------------------------ */
+.main-article-cart-nav-label {
+
+    background-color: var(--dark-moon-grey);
+    height: 3.3em;
+
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .6em;
+
+    line-height: 1.2em;
+
+    padding: 0em .5em 0em .5em;
+
+    cursor: pointer;
+
+}
+
+/* in every label the second unshown - only for hover show */
+.main-article-cart-nav-label > img:nth-of-type(2) { display: none; }
+
+
+.main-article-cart-nav-label:hover > img:nth-of-type(1) { display: none; }
+.main-article-cart-nav-label:hover > img:nth-of-type(2) { display: block; }
+
+
+/* label imgs */
+.svg-m-a-c-n-t-web { height: 1.5em; }
+.svg-m-a-c-n-t-web-black { height: 1.1em;}
+
+.svg-m-a-c-n-t-other { height: 1.2em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------- */ 
+/* [Default] - Content Nav Animated - Container               */
+/* ---------------------------------------------------------- */ 
+
+
+/* --------------------------------------------- */
+/* Keyframe - Animation for Animated Arrows 
+/* --------------------------------------------- */
+
+/* add key frame to img */
+.svg-keyframe-arrow-up-down > img {
+
+    transform: rotate(180deg);
+    animation: padding-b-t .6s infinite;
+
+}
+
+/* Keyframe - padding up and down */
+@keyframes padding-b-t {
+    
+    50% { padding-top: calc(.1vw + .3em);}
+    100% { padding-bottom: calc(.1vw + .4em);} 
+
+}
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+/* [Default] - Topic Content Page 
+/* --------------------------------------------------------------- */
+
+
+.main-article-card-content-open-area {
+
+    display: grid;
+    row-gap: 2.8em;
+
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    border-bottom-left-radius: .3em;
+    border-bottom-right-radius: .3em;
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+/* [Default] - Filter Panel Layout  
+/* ------------------------------------------------------------ */
+
+.main-article-card-filter-container {
+
+    display: flex;
+    
+    column-gap: 1em;
+    
+}
+
+.filter-info-box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: .7em;
+    
+    border-right: 2px solid var(--light-brown);
+
+}
+
+.png-article-cart-filter { height: 1.5em; }
+
+.main-article-card-filter-panel {
+
+    display: flex;
+    align-items: center;
+
+    column-gap: .5em;
+    row-gap: .5em;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.main-article-card-filter-label {
+
+    display: flex;
+    align-items: center;
+    column-gap: .8em;
+
+    padding: .5em;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.main-article-card-filter-label:hover {
+
+    transition: .3s;
+    background-color: var(--rainy-dark-1-grey);
+    border-radius: .3em;
+}
+
+
+/* --------------------------------- */
+/* My Own Radio Button Style 
+/* --------------------------------- */
+
+.radio-masch-style {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.1em;
+    height: 1.1em;
+
+    border-radius: .3em;
+
+    background-color: var(--rainy-dark-1-grey);
+
+    border: 2px solid var(--light-brown);
+}
+
+.radio-masch-x-box { 
+
+    display: none;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.set-masch-x-box {
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: .1em;
+
+    background-color: var(--light-brown);
+
+}
+
+
+/* ------------------------------------------------------------ */
+/* Filter Setted Page  
+/* ------------------------------------------------------------ */
+
+.main-filter-page-item-layout {
+
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+
+    row-gap: 3.5em;
+    column-gap: 1.8em;
+
+    padding-bottom: 2em;
+    padding-top: 2em;
+
+    /*margin-left: 4em;
+    margin-right: 4em;*/
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    /* light brown in rgba */
+    border-top: 1px solid rgba(217, 191, 152, .3);
+    border-bottom: 1px solid rgba(217, 191, 152, .3);
+
+}
+
+
+
+
+/* ------------------------------------------------------------------------ */
+/* Doc Item Layout 
+/* ------------------------------------------------------------------------ */
+
+
+.main-item-layout {
+
+    display: flex;
+    column-gap: 1.3em;
+
+    width: 24em;
+
+    padding: .8em;
+
+}
+
+.main-item-layout:hover {
+
+    transition: .3s;
+    background-color: rgba(56, 56, 56, 0.8);
+
+    border-radius: .3em;
+}
+
+.main-png-cover { 
+
+
+    align-self: flex-start;
+    
+    width: 7em;
+    border-radius: .3em;
+
+    box-shadow: rgba(255, 0, 0, 1.15) 0px .7px 1px 0px, rgba(0, 118, 235, 1.15) 0px 0px 0px 1px;
+
+}
+
+.main-item-grid-layout {
+
+    display: grid;
+    grid: auto 1fr / 1fr;
+    width: 100%;
+}
+
+
+
+/* ----------------------------------------------- */
+/* Item Info Header 
+/* ----------------------------------------------- */
+
+.main-item-info-header {
+
+    font-size: .9em;
+
+    color: var(--middle-2-grey);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--middle-2-grey);
+    margin-bottom: .5em;
+}
+
+
+.main-item-info-save-file-layout {
+
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+}
+
+
+.svg-item-download { height: 1em; }
+
+/* main-info-title */
+
+.m-a-c-item-box-header { font-weight: bold;}
+
+.m-a-c-item-box-text {
+
+    color: var(--middle-1-grey);
+
+}
+
+/* ----------------------------------------------- */
+/* Item Button
+/* ----------------------------------------------- */
+
+.main-item-button-container {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding-top: 1.3em;
+}
+
+.link-tab {
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: .3em;
+    background: var(--light-brown);
+
+    color: var(--black);
+
+    height: 2em;
+
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+
+    padding: 0em .5em;
+
+}
+
+.link-tab:hover {
+
+    transition: .3s;
+    background-color: var(--middle-2-grey);
+}
+
+.link-tab img { height: 1.3em; }
+
+.link-tab:visited { color: var(--black);}

@@ -1,0 +1,162 @@
+/* ---------------------------------------------------- */
+/*
+    [css-file]: header.css
+    
+    [info]: defines all styles which will be styled
+    in our header 
+
+/* ---------------------------------------------------- */
+
+
+/* ---------------------------------------------------- */
+/* Default 
+/* ---------------------------------------------------- */
+
+
+#own-header {
+
+    background-color: var(--moon-dark-black);
+    color: var(--white);
+
+    position: fixed;
+    left:0;
+    right:0;
+
+    z-index: 99;
+  
+}
+
+/* [ to Do ] - gibt es in header und footer , eine eigene Datei dafür */
+.line-container {
+
+    height: .3em;
+    background-color: var(--light-brown);
+}
+
+
+
+/* ---------------------------------------------------------------- */
+/* Header Main Container 
+/* ---------------------------------------------------------------- */
+
+#header-container {
+
+    /* remember , 100% because of resp-content-container justify-content: center */
+    width: 100%;
+    /*background-color: brown;*/
+
+    padding: .6em 0em;
+
+    /* später hier display flex */
+    display: grid;
+    justify-items: center;
+    row-gap: .8em;
+}
+
+
+/* ---------------------------------------------------- */
+/* Title Area
+/* ---------------------------------------------------- */
+
+#header-title-area {
+
+    display: flex;
+    align-items: center;
+    column-gap: 1.5em;
+}
+
+
+/* --------------------------------------- */
+/* Header Title Img Container 
+/* --------------------------------------- */
+#header-title-img-container {
+
+    position: relative;
+}
+
+
+#header-title-img-container > div {
+
+    position: absolute;
+    
+    bottom:-.6em;
+    right:-.8em;
+}
+
+.svg-header-spider-net { height: 2.3em; }
+
+.svg-header-code { height: 1.3em; }
+    
+
+
+/* --------------------------------------- */
+/* Header Title Text Container 
+/* --------------------------------------- */
+
+#header-title-text-container {
+
+    line-height: 1.3em;
+}
+
+#header-title-text-container > div:first-child {
+
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#header-title-text-container > div:last-child {
+
+    color: var(--light-brown);
+}
+
+
+/* ---------------------------------------------------- */
+/* Nav Link Area
+/* ---------------------------------------------------- */
+
+#header-nav-link-area {
+
+    display: flex;
+    align-items: center;
+    column-gap: .3em;
+
+}
+
+
+/* ----------------------------------- */
+/* Link Style 
+/* ----------------------------------- */
+
+a.a-header-nav-link {
+
+    display: flex;
+    align-items: center;
+    column-gap: .4em;
+
+    padding: .1em .5em;
+
+    border-radius: .3em;
+    border:1px solid var(--light-brown);
+
+    color: var(--white);
+    text-decoration: none;
+  
+}
+
+a.a-header-nav-link:visited { color: var(--white);}
+
+.svg-a-header-nav-link { height: .8em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
